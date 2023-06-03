@@ -54,11 +54,11 @@ eliminado = mi_lista3.pop(2)
 print(mi_lista3)
 print(eliminado)
 
-lista = ['g','o','b','m','c']
+lista = ["YouTube", "Facebook", "Twitter", "Whatsap"]
 lista.sort()
-print(lista)
+print("sort",lista)
 
-lista = ['g','o','b','m','c']
+lista = ["YouTube", "Facebook", "Twitter", "Whatsap"]
 lista.reverse()
 print(lista)
 
@@ -73,6 +73,7 @@ mi_lista = ['litos','tiago','alejo','juli','correa']
 #actividad 2
 medios_transporte = ["avión", "auto", "barco", "bicicleta"]
 medios_transporte.append("motocicleta")
+print(medios_transporte)
 
 #actividad 3
 frutas = ["manzana", "banana", "mango", "cereza", "sandía"]
