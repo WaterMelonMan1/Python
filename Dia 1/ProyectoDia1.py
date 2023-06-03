@@ -1,0 +1,1 @@
+print("El nombre de tu cerveza es \n" + '"' + input("De donde son las mujeres mas lindas: ") + " " + input("Color favorito: ") + '"')
