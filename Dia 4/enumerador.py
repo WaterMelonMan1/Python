@@ -12,6 +12,7 @@ for indice,nombre in enumerate(lista_nombres):
 #actividad 2
 python = "Python"
 lista_indices = list(enumerate(python))
+print(lista_indices)
 
 
 #actividad 3

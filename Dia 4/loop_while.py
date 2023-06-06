@@ -16,7 +16,7 @@ else:
 
 print("__________________")
 for letra in "Federico":
-    if letra == "r":
+    if letra == "i":
         break
     print(letra)
 
@@ -28,7 +28,7 @@ for letra in "Federico":
 
 #actividad 1
 numero = 10
-while numero >= 0:
+while numero >= -5:
     print(numero)
     numero -= 1
 
