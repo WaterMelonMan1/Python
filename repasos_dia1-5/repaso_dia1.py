@@ -1,0 +1,1 @@
+print("El nombre de tu cerveza es: \n" + '"' + input("A que lugar te gustaria viajar: ") + " " + input("Color favorito: ") + '"')
