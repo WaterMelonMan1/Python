@@ -15,6 +15,7 @@ else:
     print("Gracias por participar")
 
 print("__________________")
+
 for letra in "Federico":
     if letra == "i":
         break
@@ -31,6 +32,8 @@ numero = 10
 while numero >= -5:
     print(numero)
     numero -= 1
+else:
+    print("YA estas por fuera de los limites del ciclo")
 
 #actividad 2
 numero = 50

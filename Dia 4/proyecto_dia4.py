@@ -1,30 +1,43 @@
-from random import *
-numero_aleatorio = randint(1,100)
-intento = 8
-nombre = input("Dime tu Nombre: ")
-print(f"Bueno, {nombre}, he pensado un número entre 1 y 100, \ny tienes solo ocho intentos para adivinar cuál crees que es el número")
-eleccion = int(input("Ingresa tu numero: "))
-booleano = eleccion > 0 and eleccion < 101
-estado = ""
-while booleano == True:
-    while intento > 0:
-        if eleccion == numero_aleatorio:
-            print(f"Ganaste adivinaste que el numero era el {eleccion}")
-            estado = "w"
+import os
+import random
+
+#parte 1 se le pregunta el nombre y se le induce al aplicativo a la persona
+nombre = input("Ingresa tu nombre: ")
+os.system("cls")
+print(f"Hola {nombre}, pensado en un numero del 1 al 100\nTienes 8 intentos para adicinar el numero")
+
+#parte 2 se decalara el numero y las herramientas a usar 
+numero = 10
+vidas = 7
+cumple = False
+intentos = 0
+#parte 3 se empiza el ciclo de 8 veces para el juego y revision del numero sleccionado
+#Se cerifica que el numero ingresado si cumpla el requisito x>=0 and x<=100
+while cumple == False:
+    numero_elejido = int(input("Ingresa el numero que creas que sea: "))
+    if (numero_elejido < 0 or numero_elejido > 100):
+        print("Haz elejido un numero que no esta permitido, elije otro")
+    else:
+        break
+#se empieza el jueg de 8 intentos
+while vidas > 0:
+    intentos += 1 
+    if numero_elejido == numero:
+        if intentos == 1: 
+            print("Felicidades haz ganado, al primer intento\nTe ganaste un golpe en la traquea")
             break
-        elif eleccion > numero_aleatorio:
-            print(f"Respuesta es incorrecta ha elegido un número Mayor al número secreto.")
-            eleccion = int(input("Ingresa otro numero: "))
-            intento -= 1
-        elif eleccion < numero_aleatorio:
-            print(f"Respuesta es incorrecta ha elegido un número Menor al número secreto.")
-            eleccion = int(input("Ingresa otro numero: "))
-            intento -= 1
-    break
-else:
-    print(f"El numero {eleccion} esta por fuera de los parametrso permitidos(debe ser entre o y 100)")
-if estado == "w":
-    print("CONGRATULATION, TE GANASTE UNA BOFETADA")
-else:
-    print("ERES UN PUTO FRACASADO")
-    print(f"EL numero secreto era {numero_aleatorio}")
+        else:
+            print(f"Felicidades adivinaste que el numeor secreto era el {numero_elejido}\nNumero de intentos{intentos}")
+    elif numero_elejido > numero:
+        print("Incorrecto, el numero elejido esta por encima del numero secreto")
+        print(f"Intento {intentos}")
+        numero_elejido = int(input("Ingresa el numero que creas que sea: "))
+        vidas -= 1
+    else:
+        print("Incorrecto, el numero elejido esta por debajo del numero secreto")
+        print(f"Intento {intentos}")
+        numero_elejido = int(input("Ingresa el numero que creas que sea: "))
+        vidas -= 1
+
+if vidas == 0:
+    print("Te usaste tus 8 intentos, que malo eres")

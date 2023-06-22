@@ -6,8 +6,8 @@ print(mis_tuplas[1][0])
 
 #actividad 1
 lista_nombres = ["Marcos", "Laura", "Mónica", "Javier", "Celina", "Marta", "Darío", "Emiliano", "Melisa"]
-for indice,nombre in enumerate(lista_nombres):
-    print(f'{nombre} se encuentra en el índice {indice}')
+for x,y in enumerate(lista_nombres):
+    print(f'{y} se encuentra en el índice {x}')
 
 #actividad 2
 python = "Python"
@@ -17,7 +17,6 @@ print(lista_indices)
 
 #actividad 3
 lista_nombres = ["Marcos", "Laura", "Mónica", "Javier", "Celina", "Marta", "Darío", "Emiliano", "Melisa"]
-
 for indice,item in enumerate(lista_nombres):
     if item.startswith("M"):
-        print(indice)
+        print(indice,item)

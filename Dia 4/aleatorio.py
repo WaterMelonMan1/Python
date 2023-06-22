@@ -1,4 +1,4 @@
-from random import *
+import random
 aleatorio = randint(1,50)
 print(aleatorio)
 
